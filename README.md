@@ -2,7 +2,7 @@
 
 being a little joke program based on a recurring utterance in [the Action Button review of Pac-Man by Tim Rogers](https://youtu.be/GPzVlTgZoCg?t=190).
 
-```bash
+```
 MOBYKEY=moby_123abc go run main.go
 wow. games sure have come a long way since Bust-A-Move 4 for Windows!
 ```
