@@ -11,16 +11,9 @@ import (
 	"time"
 )
 
-//go:embed platforms.json
-var platformJSON []byte
-
 type Platform struct {
 	ID   int    `json:"platform_id"`
 	Name string `json:"platform_name"`
-}
-
-type platformData struct {
-	Platforms []Platform
 }
 
 type gameData struct {
@@ -33,12 +26,6 @@ type gameData struct {
 func _main(apiKey string) error {
 	var foundGame string
 	var foundPlatform string
-
-	var pd platformData
-	if err := json.Unmarshal(platformJSON, &pd); err != nil {
-		panic(err)
-	}
-	//ps := pd.Platforms
 
 	v := url.Values{}
 	v.Add("format", "normal")
